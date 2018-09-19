@@ -818,6 +818,10 @@ def main():
 
             sys.exit(0)
 
+        # Exit if you don't want to use Nuitka's builtin freezer
+        if Options.options.skip_freezer:
+            sys.exit(0)
+
         if Options.isStandaloneMode():
             binary_filename = options["result_exe"]
 

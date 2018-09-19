@@ -316,6 +316,15 @@ PYTHONPATH. When all modules are successfully included, you ought to not need
 PYTHONPATH anymore."""
 )
 
+execute_group.add_option(
+    "--skip-freezer",
+    action  = "store_true",
+    dest    = "skip_freezer",
+    default = False,
+    help    = """\
+Do not use nuitka builtin-freezer. This is for debugging. Defaults to off."""
+)
+
 parser.add_option_group(execute_group)
 
 dump_group = OptionGroup(
